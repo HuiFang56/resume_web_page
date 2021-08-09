@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import '@fontsource/roboto';
+import './css/styles.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Grid from "@material-ui/core/Grid";
+import Intro from './components/Intro';
+import NavigationBar from './components/NavigationBar';
+import React from 'react';
+import woman from './photos/woman.png';
+
+const ResumePage = () => {
+    return (
+        <Grid Container>
+            <div>
+                <NavigationBar logoPic={woman}/>
+                <Intro />
+            </div>
+        </Grid>
+        );
 }
-
-export default App;
+export default ResumePage;
